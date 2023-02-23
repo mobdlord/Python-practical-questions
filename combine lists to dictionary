@@ -1,0 +1,13 @@
+key = ['red','orange','red','red','green']
+values = ['apple','pumpkin','cherry','raspberry','grapes']
+
+d = {}
+
+if len(key) == len(values):
+    for i in range(0, len(key)):
+        d[key[i]] = values[i]
+
+else:
+    print("Both lists have unequal amount of elements")
+
+print(d)
