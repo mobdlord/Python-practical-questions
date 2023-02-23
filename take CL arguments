@@ -1,0 +1,11 @@
+import sys
+
+print("Enter system line arguments to add two numbers")
+
+a = sys.argv[0]
+print(a, "is the name of the file")
+
+b = int(sys.argv[1])
+c = int(sys.argv[2])
+
+print(b+c, "is the sum")
