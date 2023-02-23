@@ -1,0 +1,44 @@
+def sum(l1):
+    x = 0
+    for i in l1:
+        x+=i
+    return x
+
+def oddoreven(l1):
+    if len(l1)%2 == 0:
+        return 'even'
+    else:
+        return 'odd'
+    
+def med(l1):
+    l1.sort()
+    if oddoreven(l1) == 'odd':
+        a = int((len(l1)+1)/2)
+        return f"{l1[a-1]} is the median"
+    
+    else:
+        a = int(len(l1)/2)
+        b = (l1[a-1]+l1[a])/2
+        return f"{b} is the median"
+
+def mo(l1):
+    max = 0
+    l2 = []
+    for i in l1:
+        if l1.count(i)==max and i not in l2 : 
+            max = l1.count(i)
+            l2.append(i)
+            l1.remove(i)
+            
+        elif l1.count(i)>max:
+            l2 = [i]
+            max = l1.count(i)
+            l1.remove(i)
+
+    return f'mode is {l2}'
+
+l = [3,2,1,4,5,6,2]
+
+print(med(l))
+print(mo(l))
+print(sum(l)/len(l), 'is the mean')
