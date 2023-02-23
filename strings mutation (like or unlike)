@@ -1,0 +1,31 @@
+s1 = "strng"
+s2 = "strong"                       #ASSUMPTION: length of s1 would be shorter than s2 (if both are unequal, if it is equal it would work still)
+mut = 0
+l1 = []
+l2 = []
+
+j = 0
+
+for i in s1:
+    l1.append(i)
+for i in s2: 
+    l2.append(i)
+
+if len(s1) == len(s2): 
+    for i in range(0,len(s1)):
+        if s1[i] != s2[i]:
+            mut+=1
+
+elif abs(len(s1)-len(s2)) == 1:
+    if len(s2)>len(s1): 
+        while j<len(s1):
+            if l1[j] != l2[j]:
+                l2.remove(l2[j])
+                mut+=1
+            else: 
+                j+=1
+    
+if mut>1:
+    print("unlike")
+else: 
+    print("like")  
