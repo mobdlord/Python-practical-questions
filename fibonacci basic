@@ -1,0 +1,8 @@
+l = [1,2]
+
+n = int(input("Enter the number of terms you want to display: "))
+
+for i in range(0,n-2):
+    l.append(l[-1]+l[-2])
+
+print(l)
